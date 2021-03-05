@@ -20,18 +20,12 @@ app.set("views", __dirname + "/views");
 
 app.use(express.static(__dirname + "/public"));
 
-
-app.get('/', (req, res) => {
-  //res.send('Respondiendo desde express')
-  res.render("index.ejs", {titulo: "mi titulo dinamico"});
-})
+// RutasWeb
+app.use('/', require('./router/RutasWeb'));
+app.use('/mascotas', require('./router/Mascotas'));
 
 
-app.get('/servicios',(req,res) => {
-  res.render("servicios.ejs", {tituloServicios: "mensaje dinamico de servicios"});
-})
-
-app.use((req, res, next) => {
+app.use((req, res, next) => { //use significa middleware 
   res.status(404).render("404.ejs", {
     titulo: "404",
     descripcion: "mensaje de error"

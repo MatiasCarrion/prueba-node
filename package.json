@@ -4,7 +4,8 @@
   "description": "",
   "main": "arreglo.js",
   "scripts": {
-    "start": "node prueba1"
+    "start": "node prueba1",
+    "dev": "nodemon prueba1"
   },
   "keywords": [],
   "author": "",
