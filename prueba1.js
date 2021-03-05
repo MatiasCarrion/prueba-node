@@ -11,7 +11,7 @@ server.listen(puerto, () => { console.log('Escuchando solicitudes')}) */
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const puerto = process.env.PORT || 3000;
 //const puerto = 3000;
 
 //motor de plantillas
