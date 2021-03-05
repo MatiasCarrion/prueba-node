@@ -11,8 +11,24 @@ server.listen(puerto, () => { console.log('Escuchando solicitudes')}) */
 
 const express = require('express');
 const app = express();
+
+require('dotenv').config();
+
 const puerto = process.env.PORT || 3000;
 //const puerto = 3000;
+
+
+// Conexión a base de datos
+const mongoose = require('mongoose');
+const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.0sde7.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+
+mongoose.connect(uri, 
+  {useNewUrlParser: true, useUnifiedTopology: true}
+  )
+  
+  .then(() => console.log('Base de datos conectada.'))
+  .catch(e => console.log(e))
+  
 
 //motor de plantillas
 app.set("view engine", "ejs");
