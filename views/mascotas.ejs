@@ -3,7 +3,7 @@
     <div class="container">
 
         texto
-        <!-- <table class="table">
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -15,11 +15,11 @@
             <tbody>
 
                 <% if (arrayMascotas.length> 0) { %>
-                    <% arrayMascotas.forEach(mascota=> { %>
+                    <% arrayMascotas.forEach(mascota => { %>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
+                            <th scope="row"> <%= mascota.id %>  </th>
+                            <td> <%= mascota.nombre %> </td>
+                            <td> <%= mascota.descripcion %> </td>
                             <td>@mdo</td>
                         </tr>
 
@@ -28,7 +28,7 @@
                 <% } %>
 
             </tbody>
-        </table> -->
+        </table>
 
 
 

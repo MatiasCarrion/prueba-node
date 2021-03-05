@@ -4,12 +4,12 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     //res.send('Respondiendo desde express')
-    res.render("index.ejs", {titulo: "mi titulo dinamico"});
+    res.render("index", {titulo: "mi titulo dinamico"});
   })
   
   
 router.get('/servicios',(req,res) => {
-    res.render("servicios.ejs", {tituloServicios: "mensaje dinamico de servicios"});
+    res.render("servicios", {tituloServicios: "mensaje dinamico de servicios"});
 })
 
 module.exports = router;

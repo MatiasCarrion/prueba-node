@@ -33,4 +33,6 @@ app.use((req, res, next) => { //use significa middleware
 });
 
 app.listen(puerto, () => {
-console.log('Servidor esperando en puerto: '+ puerto)})
+console.log('Servidor esperando en puerto: '+ puerto)
+
+})
