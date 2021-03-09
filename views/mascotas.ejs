@@ -1,6 +1,13 @@
 <%- include("template/cabecera", {tituloWeb: 'Pagina de Mascotas' }) %>
 
     <div class="container">
+        <h1>CRUD MONGO</h1>
+        <a 
+        href="/mascotas/crear"
+        class="btn btn-success btn-block my-4"
+        >
+        Crear nueva mascota
+        </a>
 
         <table class="table">
             <thead>
@@ -19,7 +26,18 @@
                             <th scope="row"> <%= mascota.id %>  </th>
                             <td> <%= mascota.nombre %> </td>
                             <td> <%= mascota.descripcion %> </td>
-                            <td>@mdo</td>
+                            <td>
+                                <a 
+                                href="/mascotas/<%= mascota.id %>"
+                                class="btn btn-warning btn-sm"
+                                
+                                >
+                                
+                                Editar
+                                
+                                </a>
+
+                            </td>
                         </tr>
 
 
